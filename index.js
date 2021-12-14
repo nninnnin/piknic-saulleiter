@@ -8,5 +8,15 @@ const $image = document.querySelector("#image");
 
   const { data: sourceList } = await axios.get("/data/imageSource.json");
 
-  $image.src = sourceList[0];
+  const testUrl = sourceList[0];
+
+  const {
+    data: { base64Source },
+  } = await axios.get("http://localhost:3000/instagram", {
+    params: {
+      imageSource: testUrl,
+    },
+  });
+
+  $image.src = "data:image/jpg;base64," + base64Source;
 })();
