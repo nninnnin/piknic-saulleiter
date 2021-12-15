@@ -15,7 +15,7 @@ const $author = document.querySelector("#author");
         const {
           data: { base64Source },
         } = await axios(
-          "http://localhost:3000/instagram/fromPostUrlToImageSource",
+          "https://instagram-proxy-saulleiter.herokuapp.com/instagram/fromPostUrlToImageSource",
           {
             params: {
               postUrl,
@@ -38,11 +38,14 @@ const $author = document.querySelector("#author");
 
     const {
       data: { base64Source },
-    } = await axios.get("http://localhost:3000/instagram", {
-      params: {
-        imageSource: testUrl,
-      },
-    });
+    } = await axios.get(
+      "https://instagram-proxy-saulleiter.herokuapp.com/instagram",
+      {
+        params: {
+          imageSource: testUrl,
+        },
+      }
+    );
 
     $image.src = "data:image/jpg;base64," + base64Source;
 
