@@ -17,11 +17,23 @@ body {
   place-items: center;
 }
 
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 .image-container {
 }
 
 #image {
   width: 100%;
-  height: 100%;
-  max-width: 50vw;
+  height: auto;
+  max-width: 30vw;
+}
+
+#author {
+  color: white;
+  text-align: right;
 }
