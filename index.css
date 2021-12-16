@@ -11,6 +11,18 @@ body {
   height: 100vh;
 }
 
+.loading {
+  font-size: 30%;
+  background-color: #fff;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 1em;
+  opacity: 0.8;
+}
+
 .container {
   background-color: black;
 
