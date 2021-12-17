@@ -64,8 +64,8 @@ const $author = document.querySelector("#author");
               console.log("호잇?");
               renderResult();
             }
-          }, 2500);
-        }, 2500 * i);
+          }, 4000);
+        }, 4000 * i);
       }
     }
 
