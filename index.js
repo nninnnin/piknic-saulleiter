@@ -61,7 +61,6 @@ const $author = document.querySelector("#author");
 
           setTimeout(() => {
             if (result.length === i + 1) {
-              console.log("호잇?");
               renderResult();
             }
           }, 4000);
