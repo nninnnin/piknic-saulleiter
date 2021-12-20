@@ -5,10 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="admin.css" />
   </head>
+
   <body>
     <div class="container">
-      <h1>Saul Leiter admin</h1>
+      <h1>#Saulleiterinspired manager</h1>
+
+      <form>
+        <div class="post">
+          <label>author: </label> <input /> <label>url: </label> <input />
+          <button type="submit" class="create">새로 만들기</button>
+        </div>
+      </form>
 
       <div class="post-list"></div>
     </div>
@@ -19,28 +28,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script>
-      const $postList = document.querySelector(".post-list");
-
-      (async function () {
-        const { data: postList } = await axios("/data/data.json");
-
-        console.log(postList);
-
-        const postListElements = Array.from(postList).map((post) => {
-          return `
-            <div>
-              author: ${post.author}
-              <br />
-              url: ${post.url}
-            </div>
-          `;
-        });
-
-        console.log(postListElements);
-
-        $postList.innerHTML = postListElements;
-      })();
-    </script>
+    <script src="admin.js"></script>
   </body>
 </html>

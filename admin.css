@@ -1,3 +1,54 @@
 * {
   font-family: Helvetica;
 }
+
+.container {
+  width: 30%;
+  margin: 0 auto;
+}
+
+form {
+}
+
+form button.create {
+  padding: 50px;
+}
+
+.post-list {
+}
+
+.post {
+  padding: 20px 15px;
+  transition: 0.2s;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.post span.id {
+  font-size: 1.2em;
+  font-weight: 700;
+
+  position: absolute;
+  top: 17px;
+  transform: translate(-145%);
+}
+
+.post:hover {
+  background-color: lightcyan;
+}
+
+.post label {
+  margin-bottom: 5px;
+}
+
+.post input {
+  align-self: center;
+
+  width: 97%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
