@@ -16,7 +16,7 @@ const $author = document.querySelector("#author");
         const {
           data: { base64Source },
         } = await axios(
-          "http://localhost:3000/instagram/fromPostUrlToImageSource",
+          "https://i-p-2.herokuapp.com/instagram/fromPostUrlToImageSource",
           {
             params: {
               postUrl,
