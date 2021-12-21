@@ -16,7 +16,7 @@ const $author = document.querySelector("#author");
         const {
           data: { base64Source },
         } = await axios(
-          "https://instagram-proxy-saulleiter.herokuapp.com/instagram/fromPostUrlToImageSource",
+          "http://localhost:3000/instagram/fromPostUrlToImageSource",
           {
             params: {
               postUrl,
@@ -33,22 +33,19 @@ const $author = document.querySelector("#author");
 
     console.log("Succesfully get all the pictures from proxy server!", result);
 
-    const { data: sourceList } = await axios.get("/data/imageSource.json");
+    // const { data: sourceList } = await axios.get("/data/imageSource.json");
 
-    const testUrl = sourceList[0];
+    // const testUrl = sourceList[0];
 
-    const {
-      data: { base64Source },
-    } = await axios.get(
-      "https://instagram-proxy-saulleiter.herokuapp.com/instagram",
-      {
-        params: {
-          imageSource: testUrl,
-        },
-      }
-    );
+    // const {
+    //   data: { base64Source },
+    // } = await axios.get("http://localhost:3000/instagram", {
+    //   params: {
+    //     imageSource: testUrl,
+    //   },
+    // });
 
-    $image.src = "data:image/jpg;base64," + base64Source;
+    // $image.src = "data:image/jpg;base64," + base64Source;
 
     function renderResult() {
       for (let i = 0; i < result.length; i++) {
