@@ -28,6 +28,10 @@ form button.create {
   position: relative;
 }
 
+.post.presenting {
+  padding-left: calc(20px + 3.5em);
+}
+
 .post span.id {
   font-size: 1.2em;
   font-weight: 700;
