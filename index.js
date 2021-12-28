@@ -33,20 +33,6 @@ const $author = document.querySelector("#author");
 
     console.log("Succesfully get all the pictures from proxy server!", result);
 
-    // const { data: sourceList } = await axios.get("/data/imageSource.json");
-
-    // const testUrl = sourceList[0];
-
-    // const {
-    //   data: { base64Source },
-    // } = await axios.get("http://localhost:3000/instagram", {
-    //   params: {
-    //     imageSource: testUrl,
-    //   },
-    // });
-
-    // $image.src = "data:image/jpg;base64," + base64Source;
-
     function renderResult() {
       for (let i = 0; i < result.length; i++) {
         const { author, base64Source } = result[i];
