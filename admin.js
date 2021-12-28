@@ -10,7 +10,7 @@ const $postList = document.querySelector(".post-list");
       const {
         data: { base64Source },
       } = await axios(
-        `${PROXY_ADDRESS}/instagram/fromPostUrlToImageSource?postUrl=${post.url}`
+        `${PROXY_ADDRESS}/instagram/postUrlToImageSource?postUrl=${post.url}`
       );
 
       post.imageString = base64Source;
