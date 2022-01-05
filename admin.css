@@ -21,15 +21,23 @@ form button.create {
   padding: 20px 15px;
   transition: 0.2s;
   border-radius: 5px;
+  margin: 3em auto;
 
   display: flex;
   flex-direction: column;
 
   position: relative;
+
+  background-color: black;
+  color: white;
 }
 
 .post.presenting {
   padding-left: calc(20px + 3.5em);
+}
+
+.post img {
+  margin-bottom: 1em;
 }
 
 .post span.id {
@@ -41,8 +49,9 @@ form button.create {
   transform: translate(-145%);
 }
 
-.post:hover {
+.post.presenting:hover {
   background-color: lightcyan;
+  color: black;
 }
 
 .post label {
