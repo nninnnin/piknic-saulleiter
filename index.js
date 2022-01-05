@@ -16,12 +16,12 @@ console.log("Request to ", PROXY_ADDRESS);
     $image.src = "data:image/jpeg;base64," + DEFAULT_IMAGE_STRING;
 
     // 1. 서버에서 포스트 url 리스트를 가져온다
-    const { data: postList } = await axios.get(
-      `${PROXY_ADDRESS}/instagram/posts`
-    );
+    const {
+      data: { postList },
+    } = await axios.get(`${PROXY_ADDRESS}/instagram/posts`);
 
     // 2. 각 포스트 url에 해당하는 이미지를 가져온다
-    const imageList = mapPostListToImageList(postList);
+    const imageList = await mapPostListToImageList(postList);
 
     // 3. 이미지 리스트를 일정 간격으로 렌더링한다
     renderImageList(imageList);
