@@ -9,7 +9,7 @@ const $author = document.querySelector("#author");
   try {
     $image.src = DEFAULT_IMAGE_SOURCE;
 
-    const { data: postList } = await axios.get("/data/data.json");
+    const { data: postList } = await axios.get("/public/data/data.json");
 
     const result = await Promise.all(
       postList.map(async ({ url: postUrl, author }) => {
