@@ -51,6 +51,8 @@ const $author = document.querySelector("#author");
       for (let i = 0; i < result.length; i++) {
         const { author, base64Source } = result[i];
 
+        if (!base64Source) continue;
+
         setTimeout(() => {
           $loading.style.display = "none";
           $image.src = "data:image/jpg;base64," + base64Source;
