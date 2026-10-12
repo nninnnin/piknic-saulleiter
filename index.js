@@ -1,3 +1,5 @@
+const PROXY_URL = "https://github.com/nninnnin/piknic-saulleiter.git";
+
 const $notification = document.querySelector(".notification");
 const $image = document.querySelector("#image");
 const $author = document.querySelector("#author");
@@ -10,14 +12,11 @@ const $author = document.querySelector("#author");
       postList.map(async ({ url: postUrl, author }) => {
         const {
           data: { result, base64Source },
-        } = await axios(
-          "https://i-p-2.herokuapp.com/instagram/fromPostUrlToImageSource",
-          {
-            params: {
-              postUrl,
-            },
-          }
-        );
+        } = await axios(`${PROXY_URL}/instagram/fromPostUrlToImageSource`, {
+          params: {
+            postUrl,
+          },
+        });
 
         if (!(result === "ok") || !base64Source) return;
 
@@ -25,12 +24,12 @@ const $author = document.querySelector("#author");
           author,
           base64Source,
         };
-      })
+      }),
     );
 
     console.log("가져온 사진들", result);
 
-    const filteredResult = result.filter(result => result);
+    const filteredResult = result.filter((result) => result);
 
     console.log("필터링 된 목록", filteredResult);
 
