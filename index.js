@@ -1,4 +1,4 @@
-const PROXY_URL = "https://github.com/nninnnin/piknic-saulleiter.git";
+const PROXY_URL = "https://instagram-proxy-three.vercel.app";
 
 const $notification = document.querySelector(".notification");
 const $image = document.querySelector("#image");
